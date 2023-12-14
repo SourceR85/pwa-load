@@ -3,8 +3,10 @@ import { get } from "svelte/store";
 
 /*
 This will break with this message:
-[vite] Error when evaluating SSR module /src/routes/+page.ts: failed to import "/src/lib/webStorage.ts"
-|- ReferenceError: localStorage is not defined
+node:internal/event_target:1083
+  process.nextTick(() => { throw err; });
+                           ^
+ReferenceError [Error]: localStorage is not defined
 */
 import { preferredScheme } from "$lib/webStorage";
 
